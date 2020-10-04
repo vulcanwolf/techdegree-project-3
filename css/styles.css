@@ -1,0 +1,159 @@
+/*Base Styles*/
+*{
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif;
+  border: none;
+}
+
+body{
+  margin: 0;
+}
+
+form{
+  max-width: 900px;
+  margin: auto;
+  background-color: #ffe6eb;
+}
+legend{
+  border: none;
+}
+fieldset{
+  margin: 0;
+  border: none;
+}
+hr{
+  margin: 0;
+  border: 1px solid black;
+}
+
+::placeholder{
+  text-align: right;
+}
+/*Top Header Area*/
+h1{
+  color:white;
+  margin: 0;
+  background-color: #0f1e36;
+  width: 100%;
+  text-align: center;
+  padding: 1em .5em;
+}
+
+.top-header p{
+  padding: 0 1em 1em 1em;
+  font-weight: bold;
+}
+
+.top-header{
+  border-bottom: 5px solid black;
+  margin-bottom: 4px;
+  background-color: #ffe6eb;
+}
+
+/*When Fields are in Focus*/
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 1px 1px 5px 2px #bce6e3;
+  border: 2px solid #385d85;
+  outline: none;
+}
+
+/*Base input field styles*/
+.contact-info input,
+.contact-info select,
+textarea{
+  padding: 1em;
+  border-radius: 4px;
+  display: block;
+  margin: 1em 0;
+  background-color: #f0f0f0;
+}
+
+#user_topic::placeholder{
+  text-align: left;
+}
+#zip{
+  width: 50%;
+}
+
+/*Newsletter Text-Area & Button Styles*/
+textarea{
+  width: 100%;
+  height: 10em;
+  margin-bottom: 1.5em;
+}
+
+button{
+  background-color: #2DC1AD;
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+}
+
+button:hover{
+  cursor:pointer;
+  background: #e6608d;
+  transition: 2s;
+}
+
+#topics{
+  display: inline-block;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+fieldset label:last-child{
+  display: block;
+  text-align: center;
+  color: darkgrey;
+}
+
+/*Mobile Layout*/
+.top-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter label{
+  display: inline-block;
+  padding-bottom: 1em;
+}
+
+/*Media Querie for Tablet mode and up */
+@media(min-width:768px){
+  .contact-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contact-info label,
+  .contact-info input{
+    align-self: center;
+  }
+  #zip{
+    flex-basis: 30%;
+  }
+  .contact-input{
+    flex-basis: 80%;
+  }
+  .contact-label{
+    flex-basis: 20%;
+  }
+}
