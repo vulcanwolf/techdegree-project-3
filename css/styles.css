@@ -51,6 +51,18 @@ h1{
   background-color: #ffe6eb;
 }
 
+/*Base input field styles*/
+.contact-info input,
+.contact-info select,
+textarea{
+  padding: 1em;
+  border-radius: 5px;
+  display: block;
+  margin: 1em 0;
+  background-color: #f0f0f0;
+  border: 2px solid transparent;
+}
+
 /*When Fields are in Focus*/
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -62,18 +74,6 @@ textarea:focus {
   background-color: #E7FDFA;
   outline: none;
   border: 2px solid black;
-}
-
-/*Base input field styles*/
-.contact-info input,
-.contact-info select,
-textarea{
-  padding: 1em;
-  border-radius: 5px;
-  display: block;
-  margin: 1em 0;
-  background-color: #f0f0f0;
-  border: 2px solid transparent;
 }
 
 #user_topic::placeholder{
